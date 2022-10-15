@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ContentTargetFolders>.</ContentTargetFolders>
+        <Product>Qualia.Umb.RestartButton</Product>
+        <PackageId>Qualia.Umb.RestartButton</PackageId>
+        <Title>Qualia.Umb.RestartButton</Title>
+		<Description>
+			An Umbraco Cms plugin package for exposing a button in settings, to trigger application stopping.
+		</Description>
+		<PackageProjectUrl>https://github.com/PagonisTasos/Qualia.Umb.RestartButton</PackageProjectUrl>
+        <PackageTags>umbraco plugin package; stop application; restart</PackageTags>
+        <RootNamespace>Qualia.Umb.RestartButton</RootNamespace>
+		<Version>1.0.7</Version>
+		<Authors>Pagonis Tasos</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.1.2" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="App_Plugins\Qualia.Umb.RestartButton\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </Content>
+        <None Include="build\**\*.*">
+            <Pack>True</Pack>
+            <PackagePath>buildTransitive</PackagePath>
+        </None>
+    </ItemGroup>
+</Project>
